@@ -12,7 +12,7 @@ function Navbar() {
       </div>
 
       {/* Navigation Links */}
-      <Link to="/">Home</Link>
+      <Link to="/Dashboard">Dashboard</Link>
       <Link to="/summary">Summary</Link>
       <Link to="/patient-list">Patient List</Link>
       <Link to="/logout">Logout</Link>

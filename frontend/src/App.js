@@ -17,9 +17,9 @@ function App() {
         <div className="content-section">
           <Routes>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/summary" element={<Summary />} />
             <Route path="/patient-list" element={<PatientList />} />
-            {/* other routes */}
           </Routes>
         </div>
       </div>
@@ -28,4 +28,3 @@ function App() {
 }
 
 export default App;
-

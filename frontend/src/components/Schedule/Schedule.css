@@ -1,11 +1,34 @@
+/* Schedule.css */
+.schedule-container {
+  padding: 20px;
+}
+
 .schedule {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
 }
 
-.react-datepicker-wrapper {
-  margin-bottom: 20px;
+.time-slot {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
 }
 
-/* You might need to override some default styles of react-datepicker here */
+.time-slot.booked {
+  background-color: #ffa8a8;
+}
+
+.time-slot.free {
+  background-color: #a8ffcf;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.status {
+  display: block;
+  margin-top: 5px;
+}
