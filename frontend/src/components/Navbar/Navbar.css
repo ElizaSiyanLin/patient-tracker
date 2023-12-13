@@ -1,37 +1,56 @@
-.navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to start for vertical alignment */
-  width: 20%;
-  background-color: #f4f4f4;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.profile {
-  margin-bottom: 20px;
-  text-align: center; /* Center the profile content */
-}
-
-.profile img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
+/* Ensuring that the navbar items are styled according to the design */
 .navbar a {
-  text-decoration: none;
+  display: block;
+  padding: 15px;
+  margin-bottom: 10px; /* Space between links */
+  background-color: #ffffff; /* Assuming a white background for links */
   color: #333;
-  margin: 10px 0;
-  font-size: 18px;
-  border: 1px solid #ddd; /* Border around each link */
-  padding: 10px;
-  width: 100%; /* Make each link full width */
-  box-sizing: border-box; /* Adjust box-sizing */
-  transition: background-color 0.3s; /* Smooth background transition on hover */
+  text-decoration: none;
+  border-radius: 4px; /* Rounded corners for the links */
+  transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-  background-color: #eaeaea; /* Change background on hover */
+  background-color: #eaeaea; /* Color change on hover */
+}
+
+/* Additional styles for selected navbar item */
+.navbar a.active {
+  background-color: #ddd; /* Different background for active state */
+}
+/* Profile Image Styling */
+.profile .doctor-image {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+  border: 3px solid #fff; /* Optional: adds a white border around the image */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  margin-bottom: 20px; /* Space between the image and the doctor's name */
+}
+
+/* Ensure the profile section is centered */
+.profile {
+  text-align: center;
+  margin-bottom: 30px; /* Space between the profile and the navbar links */
+}
+
+/* Navigation Links Styling */
+.navbar .nav-link {
+  display: block;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.navbar .nav-link:hover {
+  background-color: #eaeaea;
+}
+
+.navbar .nav-link.active {
+  background-color: #ddd;
 }

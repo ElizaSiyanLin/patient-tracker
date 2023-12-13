@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar">
       {/* Doctor's Profile, if you have this section */}
       <div className="profile">
-        <img src="path_to_doctors_image" alt="Doctor" />
+        <img src="./logo512.png" alt="Doctor" className="doctor-image"/>
         <h2>Doctor's Name</h2>
       </div>
 
