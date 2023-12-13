@@ -1,0 +1,14 @@
+.app-layout {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.navbar-section {
+  width: 250px; /* Adjust width as needed */
+  border-right: 1px solid #ccc; /* Add a separator line */
+}
+
+.content-section {
+  flex-grow: 1; /* Take up remaining space */
+  overflow-y: auto; /* Scrollable if content is long */
+}

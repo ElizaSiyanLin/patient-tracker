@@ -1,0 +1,38 @@
+.patient-list-container {
+    padding: 20px;
+  }
+  
+  .search-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* So that padding doesn't affect overall width */
+  }
+  
+  .patient-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .patient-list th,
+  .patient-list td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Additional styles for interactive states like hover */
+  .patient-list tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Style for the 'Details' button or link */
+  .details-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

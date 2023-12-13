@@ -1,0 +1,11 @@
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.react-datepicker-wrapper {
+  margin-bottom: 20px;
+}
+
+/* You might need to override some default styles of react-datepicker here */
