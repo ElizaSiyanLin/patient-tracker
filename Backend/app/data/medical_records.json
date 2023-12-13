@@ -1,0 +1,36 @@
+{
+    "MedicalRecords": [
+        {
+            "MedicalRecordID": 1,
+            "PatientID": 1,
+            "CreatedBy": "Dr. Smith",
+            "CreatedAt": "2023-12-13",
+            "Diabetes": true,
+            "HighBP": false,
+            "HighCol": true,
+            "BMI": 22.5,
+            "Smoker": false,
+            "PhysActivity": "Moderate",
+            "HvyAlcoholConsump": false,
+            "GenHlth": "Good",
+            "MentHlth": "Good",
+            "PhysHlth": "Good"
+        },
+        {
+            "MedicalRecordID": 2,
+            "PatientID": 2,
+            "CreatedBy": "Dr. Jones",
+            "CreatedAt": "2023-12-14",
+            "Diabetes": false,
+            "HighBP": true,
+            "HighCol": false,
+            "BMI": 27.8,
+            "Smoker": true,
+            "PhysActivity": "Low",
+            "HvyAlcoholConsump": true,
+            "GenHlth": "Fair",
+            "MentHlth": "Fair",
+            "PhysHlth": "Fair"
+        }
+    ]
+}

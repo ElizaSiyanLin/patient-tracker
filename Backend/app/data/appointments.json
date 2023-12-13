@@ -1,0 +1,26 @@
+{
+    "Appointments": [
+        {
+            "AppointmentID": 1002,
+            "Time": "2023-12-20 10:00:00",
+            "DoctorID": 1,
+            "PatientID": 1,
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Status": "Scheduled",
+            "DoctorNote": "Initial consultation.",
+            "MedicalRecordID": 1
+        },
+        {
+            "AppointmentID": 1004,
+            "Time": "2023-12-21 15:00:00",
+            "DoctorID": 2,
+            "PatientID": 2,
+            "FirstName": "Jane",
+            "LastName": "Smith",
+            "Status": "Scheduled",
+            "DoctorNote": "Follow-up on blood pressure.",
+            "MedicalRecordID": 2
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "Patients": [
+        {
+            "PatientID": 1,
+            "FirstName": "John",
+            "LastName": "Doe",
+            "Gender": "Male",
+            "DateOfBirth": "1990-01-01",
+            "Phone": "123-456-7890",
+            "Email": "johndoe@example.com",
+            "LastAppointmentID": 1001,
+            "CurrentAppointmentID": 1002
+        },
+        {
+            "PatientID": 2,
+            "FirstName": "Jane",
+            "LastName": "Smith",
+            "Gender": "Female",
+            "DateOfBirth": "1985-05-05",
+            "Phone": "098-765-4321",
+            "Email": "janesmith@example.com",
+            "LastAppointmentID": 1003,
+            "CurrentAppointmentID": 1004
+        }
+    ]
+}

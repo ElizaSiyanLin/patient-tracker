@@ -6,19 +6,20 @@ function PatientList() {
   const [filter, setFilter] = useState('');
 
   useEffect(() => {
-    // Mock fetching data
-    const fetchedPatients = [
-      { id: 1, name: 'John Doe', condition: 'Condition A' },
-      { id: 2, name: 'Jane Smith', condition: 'Condition B' },
-      // ... more patients
-    ];
-    setPatients(fetchedPatients);
+    fetch('http://127.0.0.1:5000/patients')
+      .then(response => response.json())
+      .then(data => {
+        // Ensure the data is in the expected format
+        setPatients(data.Patients || []); // Adjust based on the actual structure
+      })
+      .catch(error => {
+        console.error('Error fetching patient data: ', error);
+      });
   }, []);
 
   const filteredPatients = filter
     ? patients.filter(patient =>
-        patient.name.toLowerCase().includes(filter.toLowerCase()) ||
-        patient.condition.toLowerCase().includes(filter.toLowerCase())
+        (patient.FirstName.toLowerCase() + ' ' + patient.LastName.toLowerCase()).includes(filter.toLowerCase())
       )
     : patients;
 
@@ -34,16 +35,14 @@ function PatientList() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Patient Name</th>
-            <th>Condition</th>
+            <th>Full Name</th>
           </tr>
         </thead>
         <tbody>
           {filteredPatients.map(patient => (
-            <tr key={patient.id}>
-              <td>{patient.id}</td>
-              <td>{patient.name}</td>
-              <td>{patient.condition}</td>
+            <tr key={patient.PatientID}>
+              <td>{patient.PatientID}</td>
+              <td>{patient.FirstName + ' ' + patient.LastName}</td>
             </tr>
           ))}
         </tbody>

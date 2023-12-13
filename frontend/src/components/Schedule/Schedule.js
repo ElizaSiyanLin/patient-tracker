@@ -1,35 +1,43 @@
-// Schedule.js
-import React from 'react';
-import './Schedule.css'; // Make sure to create this CSS file for styling
-
-const scheduleData = [
-  { time: '8:00', patientName: 'John Doe', status: 'Booked' },
-  { time: '9:00', patientName: null, status: 'Free' },
-  // ... more entries ...
-  { time: '20:00', patientName: 'Jane Smith', status: 'Booked' },
-];
+import React, { useEffect, useState } from 'react';
+import './Schedule.css'; // Make sure to create and style this CSS file
 
 function Schedule() {
+  const [scheduleData, setScheduleData] = useState([]);
+
+  useEffect(() => {
+    console.log("Fetching data...");
+    fetch('http://127.0.0.1:5000/appointments')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        setScheduleData(data.Appointments || []); // Access the 'Appointments' key
+      })
+      .catch(error => {
+        console.error('Error fetching schedule data: ', error);
+      });
+  }, []);
+  console.log(scheduleData);
+
   return (
     <div className="schedule-container">
-    <table className="schedule-table">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Patient Name</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {scheduleData.map((entry, index) => (
-          <tr key={index} className={entry.status === 'Booked' ? 'booked' : 'free'}>
-            <td>{entry.time}</td>
-            <td>{entry.patientName || '---'}</td>
-            <td>{entry.status}</td>
+      <table className="schedule-table">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Patient Name</th>
+            <th>Status</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {scheduleData.map((entry) => (
+            <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
+              <td>{entry.Time}</td>
+              <td>{`${entry.FirstName} ${entry.LastName}`}</td>
+              <td>{entry.Status}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
