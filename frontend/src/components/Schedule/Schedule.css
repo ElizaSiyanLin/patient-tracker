@@ -1,34 +1,87 @@
-/* Schedule.css */
+/* This is the CSS file for the Schedule component */
+
+/* Apply a flexbox layout to the container to center the child table */
 .schedule-container {
-  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: calc(100vh - 60px); /* Adjust height based on your navbar's height */
+  padding: 20px; /* Add some padding around the schedule */
+  box-sizing: border-box;
 }
 
-.schedule {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 10px;
+/* Style the table itself */
+.schedule-table {
+  width: 100%; /* You can adjust the width as needed */
+  max-width: 800px; /* Set a max-width for larger screens */
+  margin: auto; /* This will center the table horizontally if it's smaller than the container */
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-.time-slot {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+/* Style the table headers and cells */
+.schedule-table th,
+.schedule-table td {
+  text-align: left;
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Borders for the cells */
 }
 
-.time-slot.booked {
-  background-color: #ffa8a8;
+/* Add background colors to header */
+.schedule-table thead {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-.time-slot.free {
-  background-color: #a8ffcf;
+/* Zebra-striping for rows */
+.schedule-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
 }
 
-.time {
-  font-weight: bold;
+/* Style for booked and free slots */
+.schedule-table tr.booked {
+  background-color: #ffcccc; /* Light red for booked slots */
 }
 
-.status {
-  display: block;
-  margin-top: 5px;
+.schedule-table tr.free {
+  background-color: #ccffcc; /* Light green for free slots */
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .schedule-table {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td, .schedule-table tr {
+    display: block;
+  }
+
+  .schedule-table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .schedule-table tr {
+    margin: 0 0 1rem 0;
+  }
+  
+  .schedule-table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .schedule-table td:before {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 45%;
+    padding-right: 15px;
+    white-space: nowrap;
+    content: attr(data-label); /* Add a data-label attribute to each td in your component if you use this method */
+    font-weight: bold;
+  }
 }

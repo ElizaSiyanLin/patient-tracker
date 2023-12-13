@@ -1,38 +1,43 @@
+/* PatientList.css */
 .patient-list-container {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering the search input and table */
   }
   
   .search-input {
     margin-bottom: 20px;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box; /* So that padding doesn't affect overall width */
+    max-width: 600px; /* Set a max-width for the search input */
+    box-sizing: border-box;
   }
   
-  .patient-list {
+  .patient-list-table {
     width: 100%;
+    max-width: 800px; /* Set a max-width for the table */
     border-collapse: collapse;
+    margin-top: 10px; /* Add some space between the search input and table */
   }
   
-  .patient-list th,
-  .patient-list td {
+  .patient-list-table th,
+  .patient-list-table td {
     text-align: left;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
   }
   
-  /* Additional styles for interactive states like hover */
-  .patient-list tr:hover {
-    background-color: #f5f5f5;
-  }
-  
-  /* Style for the 'Details' button or link */
-  .details-button {
-    padding: 5px 10px;
+  .patient-list-table thead {
     background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .patient-list-table tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .patient-list-table tr:hover {
+    background-color: #e8f4ff; /* Light blue background on hover */
   }
   

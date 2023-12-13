@@ -11,6 +11,7 @@ const scheduleData = [
 
 function Schedule() {
   return (
+    <div className="schedule-container">
     <table className="schedule-table">
       <thead>
         <tr>
@@ -29,6 +30,7 @@ function Schedule() {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
 
