@@ -1,0 +1,68 @@
+/* Login.css */
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f7f7f7; /* Slightly off-white background */
+  }
+  
+  .login-form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px; /* Set a max-width for the form */
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #333; /* Dark grey color for the text */
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666; /* Lighter grey for labels */
+  }
+  
+  .login-form input {
+    display: block;
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Slightly larger font size */
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #5c67ed; /* A nice shade of blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Larger font size for the button */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  .login-form button:hover {
+    background-color: #4a52d1; /* A slightly darker shade of blue on hover */
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .login-form {
+      padding: 20px;
+    }
+  }
+  

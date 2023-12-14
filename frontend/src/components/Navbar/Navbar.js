@@ -1,21 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'; // Assuming you have a CSS file for styling Navbar
 
-function Navbar() {
+// function Navbar() {
+//   return (
+//     <div className="navbar">
+//       {/* Doctor's Profile, if you have this section */}
+//       <div className="profile">
+//         <img src="./logo192.png" alt="Doctor" className="doctor-image"/>
+//         <h2>Doctor's Name</h2>
+//       </div>
+
+//       {/* Navigation Links */}
+//       <Link to="/Dashboard">Dashboard</Link>
+//       <Link to="/summary">Summary</Link>
+//       <Link to="/patient-list">Patient List</Link>
+//       <Link to="/">Logout</Link>
+//       {/* Add more links as needed */}
+//     </div>
+//   );
+// }
+
+// export default Navbar;
+
+
+// Navbar.js
+// import React from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import './Navbar.css'; // Assuming you have a CSS file for styling Navbar
+
+function Navbar({ setAuth }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // Here you would clear the authentication state
+    if (setAuth) {
+      setAuth(false); // If using a state management solution to handle authentication
+    }
+    // If using localStorage or sessionStorage, clear the token or user data
+    // localStorage.removeItem('userToken');
+
+    // Redirect to the login page
+    navigate('/');
+  };
+
   return (
     <div className="navbar">
       {/* Doctor's Profile, if you have this section */}
       <div className="profile">
         <img src="./logo192.png" alt="Doctor" className="doctor-image"/>
-        <h2>Doctor's Name</h2>
+        <h2>Dr. </h2>
       </div>
 
       {/* Navigation Links */}
-      <Link to="/Dashboard">Dashboard</Link>
+      <Link to="/dashboard">Dashboard</Link>
       <Link to="/summary">Summary</Link>
       <Link to="/patient-list">Patient List</Link>
-      <Link to="/logout">Logout</Link>
+      {/* Use button or div onClick for Logout to handle additional logic */}
+      <div onClick={handleLogout}>Logout</div>
       {/* Add more links as needed */}
     </div>
   );
