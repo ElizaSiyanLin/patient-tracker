@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import PatientList from './components/PatientList/PatientList';
 import Summary from './components/Summary/Summary';
 import PatientHistory from './components/PatientHistory/PatientHistory';
+import MakeAppointment from './components/MakeAppointment/MakeAppointment'; // Import your MakeAppointment component
 
 // ... other imports
 
@@ -24,6 +25,9 @@ function App() {
             <Route path="/patient-list" element={<PatientList />} />
             {/* <Route path="/patient-list" element={<PatientList />} /> */}
             <Route path="/medical_records/:patientId" element={<PatientHistory />} />
+            <Route path="/make-appointment/:patientId" element={<MakeAppointment />} />
+
+
           </Routes>
         </div>
       </div>

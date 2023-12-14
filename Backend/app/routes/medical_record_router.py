@@ -24,3 +24,12 @@ def create_medical_record():
     new_medical_record_data = request.json
     MedicalRecordService.add_medical_record(new_medical_record_data)
     return jsonify({"message": "Medical record added successfully"}), 201
+
+
+@medical_record_bp.route('/medical_records/patient/<int:patient_id>', methods=['GET'])
+def get_medical_record_by_patient(patient_id):
+    medical_record = MedicalRecordService.get_medical_record_by_patient_id(patient_id)
+    if medical_record:
+        return jsonify(medical_record), 200
+    else:
+        return jsonify({"message": "Medical record not found"}), 404

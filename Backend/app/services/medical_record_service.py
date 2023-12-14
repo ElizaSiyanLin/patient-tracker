@@ -35,3 +35,9 @@ class MedicalRecordService:
         records.append(medical_record_data)
         MedicalRecordService.save_medical_records(records)
         return medical_record_data
+    
+    @staticmethod
+    def get_medical_record_by_patient_id(patient_id):
+        records = MedicalRecordService.load_medical_records()
+        # Find the first medical record for the patient with the given ID
+        return next((record for record in records if record['PatientID'] == patient_id), None)

@@ -1,5 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './Schedule.css'; // Make sure to create and style this CSS file
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+
+// const tempData = [
+//   {
+//     "AppointmentID": 1002,
+//     "Time": "2023-12-20 10:00:00",
+//     "FirstName": "John",
+//     "LastName": "Doe",
+//     "Status": "Scheduled"
+//   },
+//   // ...other appointments
+// ];
 
 function Schedule() {
   const [scheduleData, setScheduleData] = useState([]);
@@ -10,7 +22,8 @@ function Schedule() {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        setScheduleData(data.Appointments || []); // Access the 'Appointments' key
+        // setScheduleData(data.Appointments || []); // Access the 'Appointments' key
+        setScheduleData(data);
       })
       .catch(error => {
         console.error('Error fetching schedule data: ', error);
@@ -37,7 +50,7 @@ function Schedule() {
             </tr>
           ))}
         </tbody> */}
-        <tbody>
+        {/* <tbody>
             {scheduleData.map((entry) => (
               <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
                 <td>{entry.Time}</td>
@@ -45,7 +58,20 @@ function Schedule() {
                 <td>{entry.Status}</td>
               </tr>
             ))}
-          </tbody>
+          </tbody> */}
+          <tbody>
+  {scheduleData.map((entry) => (
+    <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
+      <td>{entry.Time}</td>
+      <td>
+        <Link to={`/medical_records/${entry.PatientID}`}>
+          {`${entry.FirstName} ${entry.LastName}`}
+        </Link>
+      </td>
+      <td>{entry.Status}</td>
+    </tr>
+  ))}
+</tbody>
 
       </table>
     </div>
