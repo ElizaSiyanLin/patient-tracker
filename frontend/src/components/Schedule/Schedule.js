@@ -28,7 +28,7 @@ function Schedule() {
             <th>Status</th>
           </tr>
         </thead>
-        <tbody>
+        {/* <tbody>
           {scheduleData.map((entry) => (
             <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
               <td>{entry.Time}</td>
@@ -36,7 +36,17 @@ function Schedule() {
               <td>{entry.Status}</td>
             </tr>
           ))}
-        </tbody>
+        </tbody> */}
+        <tbody>
+            {scheduleData.map((entry) => (
+              <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
+                <td>{entry.Time}</td>
+                <td>{`${entry.FirstName} ${entry.LastName}`}</td>
+                <td>{entry.Status}</td>
+              </tr>
+            ))}
+          </tbody>
+
       </table>
     </div>
   );
