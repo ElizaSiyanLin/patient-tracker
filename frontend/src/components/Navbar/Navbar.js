@@ -2,28 +2,6 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css'; // Assuming you have a CSS file for styling Navbar
 
-// function Navbar() {
-//   return (
-//     <div className="navbar">
-//       {/* Doctor's Profile, if you have this section */}
-//       <div className="profile">
-//         <img src="./logo192.png" alt="Doctor" className="doctor-image"/>
-//         <h2>Doctor's Name</h2>
-//       </div>
-
-//       {/* Navigation Links */}
-//       <Link to="/Dashboard">Dashboard</Link>
-//       <Link to="/summary">Summary</Link>
-//       <Link to="/patient-list">Patient List</Link>
-//       <Link to="/">Logout</Link>
-//       {/* Add more links as needed */}
-//     </div>
-//   );
-// }
-
-// export default Navbar;
-
-
 // Navbar.js
 // import React from 'react';
 // import { useNavigate } from 'react-router-dom';
@@ -49,15 +27,15 @@ function Navbar({ setAuth }) {
       {/* Doctor's Profile, if you have this section */}
       <div className="profile">
         <img src="./logo192.png" alt="Doctor" className="doctor-image"/>
-        <h2>Dr. </h2>
+        <h2>Patient Tracker </h2>
       </div>
 
       {/* Navigation Links */}
-      <Link to="/dashboard">Dashboard</Link>
-      <Link to="/summary">Summary</Link>
-      <Link to="/patient-list">Patient List</Link>
+      <Link className="nav-item" to="/dashboard">Dashboard</Link>
+      <Link className="nav-item" to="/summary">Summary</Link>
+      <Link className="nav-item" to="/patient-list">Patient List</Link>
       {/* Use button or div onClick for Logout to handle additional logic */}
-      <div onClick={handleLogout}>Logout</div>
+      <div className="nav-item" onClick={handleLogout}>Logout</div>
       {/* Add more links as needed */}
     </div>
   );
