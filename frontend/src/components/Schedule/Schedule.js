@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import './Schedule.css'; // Make sure to create and style this CSS file
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
-// const tempData = [
-//   {
-//     "AppointmentID": 1002,
-//     "Time": "2023-12-20 10:00:00",
-//     "FirstName": "John",
-//     "LastName": "Doe",
-//     "Status": "Scheduled"
-//   },
-//   // ...other appointments
-// ];
+import './Schedule.css';
 
 function Schedule() {
   const [scheduleData, setScheduleData] = useState([]);
@@ -22,7 +11,7 @@ function Schedule() {
       .then(response => response.json())
       .then(data => {
         console.log(data);
-        // setScheduleData(data.Appointments || []); // Access the 'Appointments' key
+       
         setScheduleData(data);
       })
       .catch(error => {
@@ -41,25 +30,7 @@ function Schedule() {
             <th>Status</th>
           </tr>
         </thead>
-        {/* <tbody>
-          {scheduleData.map((entry) => (
-            <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
-              <td>{entry.Time}</td>
-              <td>{`${entry.FirstName} ${entry.LastName}`}</td>
-              <td>{entry.Status}</td>
-            </tr>
-          ))}
-        </tbody> */}
-        {/* <tbody>
-            {scheduleData.map((entry) => (
-              <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
-                <td>{entry.Time}</td>
-                <td>{`${entry.FirstName} ${entry.LastName}`}</td>
-                <td>{entry.Status}</td>
-              </tr>
-            ))}
-          </tbody> */}
-          <tbody>
+         <tbody>
   {scheduleData.map((entry) => (
     <tr key={entry.AppointmentID} className={entry.Status === 'Scheduled' ? 'booked' : 'free'}>
       <td>{entry.Time}</td>

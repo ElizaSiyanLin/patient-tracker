@@ -1,10 +1,10 @@
-/* MakeAppointment.css */
+
 .make-appointment-container {
     width: 100%;
-    max-width: 600px; /* or your preferred width */
+    max-width: 600px; 
     margin: auto;
     padding: 20px;
-    text-align: center; /* Center the title */
+    text-align: center; 
   }
   
   .make-appointment-title {
@@ -14,7 +14,7 @@
   .make-appointment-inputs {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between inputs */
+    gap: 10px; 
     margin-bottom: 20px;
   }
   
@@ -27,7 +27,7 @@
   
   .confirm-button {
     padding: 10px 20px;
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50; 
     color: white;
     border: none;
     border-radius: 4px;
@@ -36,12 +36,12 @@
   }
   
   .confirm-button:hover {
-    background-color: #45a049; /* Darker green on hover */
+    background-color: #45a049; 
   }
   
-  /* Additional styles for success message */
+ 
 .appointment-success-message {
-    color: #4CAF50; /* Green color to indicate success */
+    color: #4CAF50; 
     font-size: 18px;
     margin-top: 20px;
   }

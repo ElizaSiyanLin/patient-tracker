@@ -1,42 +1,41 @@
-/* Ensuring that the navbar items are styled according to the design*/
 .navbar a {
   display: block;
   text-align: center;
   padding: 15px;
-  margin-bottom: 10px; /* Space between links */
-  background-color: #ffffff; /* Assuming a white background for links */
+  margin-bottom: 10px; 
+  background-color: #ffffff; 
   color: #333;
   text-decoration: none;
-  border-radius: 4px; /* Rounded corners for the links */
+  border-radius: 4px; 
   transition: background-color 0.3s;
 }
 
 .navbar a:hover {
-  background-color: #eaeaea; /* Color change on hover */
+  background-color: #eaeaea; 
 }
 
-/* Additional styles for selected navbar item */
+
 .navbar a.active {
-  background-color: #ddd; /* Different background for active state */
-}
-/* Profile Image Styling */
-.profile .doctor-image {
-  width: 100px; /* Adjust the size as needed */
-  height: 100px; /* Adjust the size as needed */
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image covers the area without stretching */
-  border: 3px solid #fff; /* Optional: adds a white border around the image */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
-  margin-bottom: 20px; /* Space between the image and the doctor's name */
+  background-color: #ddd; 
 }
 
-/* Ensure the profile section is centered */
+.profile .doctor-image {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid #fff; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; 
+}
+
+
 .profile {
   text-align: center;
-  margin-bottom: 30px; /* Space between the profile and the navbar links */
+  margin-bottom: 30px;
 }
 
-/* Navigation Links Styling */
+
 .navbar .nav-link {
   display: block;
   padding: 15px;
@@ -59,16 +58,16 @@
 .nav-item {
   display: block;
   padding: 15px;
-  margin-bottom: 10px; /* Space between links */
-  background-color: #ffffff; /* White background for links */
-  color: #333; /* Dark grey color for text */
+  margin-bottom: 10px; 
+  background-color: #ffffff; 
+  color: #333; 
   text-decoration: none;
-  border-radius: 4px; /* Rounded corners for the links */
+  border-radius: 4px; 
   transition: background-color 0.3s;
-  text-align: center; /* Center text for all items */
-  cursor: pointer; /* Change cursor to pointer for clickable items */
+  text-align: center; 
+  cursor: pointer; 
 }
 
 .nav-item:hover {
-  background-color: #eaeaea; /* Light grey background on hover */
+  background-color: #eaeaea; 
 }

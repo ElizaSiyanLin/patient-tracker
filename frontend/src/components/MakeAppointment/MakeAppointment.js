@@ -1,6 +1,6 @@
-// MakeAppointment.js
+
 import React, { useState } from 'react';
-import './MakeAppointment.css'; // Import the CSS stylesheet
+import './MakeAppointment.css';
 
 function MakeAppointment() {
   const [appointmentDetails, setAppointmentDetails] = useState({
@@ -10,11 +10,8 @@ function MakeAppointment() {
   const [isAppointmentMade, setIsAppointmentMade] = useState(false);
 
   const handleConfirm = () => {
-    // Here you would handle the appointment confirmation logic
     console.log(appointmentDetails);
-    // Assume success and set the state to true
     setIsAppointmentMade(true);
-    // You should implement actual confirmation logic, potentially sending data to a backend server
   };
 
   // Function to generate time slots, it could be dynamic based on the selected date
@@ -27,7 +24,6 @@ function MakeAppointment() {
     return [
       <option value="9:00">9:00 AM</option>,
       <option value="10:00">10:00 AM</option>,
-      // ...other time slots
     ];
   };
 

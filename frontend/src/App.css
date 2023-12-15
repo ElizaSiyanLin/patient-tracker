@@ -1,12 +1,12 @@
-/* Ensure the navbar has a fixed width and the content section takes the remaining space */
+
 .app-layout {
   display: flex;
   height: 100vh;
 }
 
 .navbar-section {
-  width: 250px; /* Fixed width for the sidebar */
-  background-color: #f4f4f4; /* Adjust the color as needed */
+  width: 250px; 
+  background-color: #f4f4f4; 
   padding: 20px;
   box-sizing: border-box;
 }
@@ -19,15 +19,14 @@
   box-sizing: border-box;
 }
 
-/* Style your navbar links to match the screenshot */
 .navbar a {
   display: block;
   margin-bottom: 10px;
   padding: 15px;
-  background-color: #fff; /* example background color */
+  background-color: #fff;
   color: #333;
   text-align: left;
-  border-radius: 5px; /* Adjust as per screenshot */
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
@@ -35,7 +34,7 @@
   background-color: #eaeaea;
 }
 
-/* Style the schedule and patient list to match the screenshot */
+
 .schedule-card, .patient-list-container {
   background-color: #fff;
   margin-bottom: 20px;
@@ -49,7 +48,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-/* Ensure that table rows change color on hover */
 .patient-list tr:hover {
   background-color: #f5f5f5;
 }
